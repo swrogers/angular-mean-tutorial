@@ -67,3 +67,8 @@
           }
              }
      #+end_src
+** Installing Angular Material
+   - run: ng add @angular/material
+     This will run the angular schematic to add and configure the material framework for you.
+     Use material.angular.io to see what components are available and how to use them.
+     Before you can actually use any of the components in a template, they need to have their modules imported in the app.module.ts file.
