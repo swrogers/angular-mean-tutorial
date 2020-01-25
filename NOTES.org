@@ -1,0 +1,21 @@
+* Angular and NodeJS - The MEAN Stack Guide 2020 Edition
+  Notes that I've taken during the video portion of the course.
+
+* Section 2 - The Angular Frontend
+** The folder structure
+   app.module.ts defines the building blocks and features of the application.
+   main.ts is the entry point and loads up the app.module.t
+** Understanding Angular Components
+   - Note taken on [2020-01-25 Sat 11:19] \\
+     A page is made of components.
+     Example: <app-header>, <app-brand>, <app-feature>.
+     These could be broken down even more if desired. If an item has its own logic behind it, then it should be a component. These are easily reused.
+** Adding First Component
+   - Note taken on [2020-01-25 Sat 11:23] \\
+     To create a component manually:
+       create a 'posts' subfolder in the 'app' folder.
+       create a 'post-create' subfolder in 'posts'.
+       create a 'post-create.component.ts' file
+       create a 'post-create.component.html' file
+       The new component needs to include the @Component decorator.
+       Before the new component can be used, it must be included in the app.module.ts as well.
