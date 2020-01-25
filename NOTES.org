@@ -19,3 +19,20 @@
        create a 'post-create.component.html' file
        The new component needs to include the @Component decorator.
        Before the new component can be used, it must be included in the app.module.ts as well.
+** Event binding
+   - To listen to events, use event binding in the template. These are denoted by () in the html.
+     #+begin_src html
+<button (click)="onAddPost()">Submit Post</button>
+     #+end_src
+** Property binding
+   - To set attributes on an object in the template, use property [] binding.
+     #+begin_src html
+<textarea [value]="newPost"></textarea>
+<textarea [value]="'Needs to be a string'"></textarea>
+     #+end_src
+** String interpolation
+   - Use string interpolation to output strings in a template
+     #+begin_src html
+<p>{{ newPost }}</p>
+<h1>{{ headerText }}</p>
+     #+end_src
