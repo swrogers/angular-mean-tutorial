@@ -36,3 +36,34 @@
 <p>{{ newPost }}</p>
 <h1>{{ headerText }}</p>
      #+end_src
+** Element references
+   - You can use an element reference to address the template object from within the component.
+     For example, from within the html template:
+     #+begin_src html
+<textarea [value]="newPost" #postInputReference></textarea>
+<button (click)="onAddPost(postInputReference)">Save Post</button>
+     #+end_src
+     The '#' indicates the name that you are saving the reference to.
+     The element can also be accessed from the component's typescript code as well:
+     #+begin_src typescript
+       onAddPost(postInput: HTMLTextAreaElement) {
+           console.log(postInput.value);
+       }
+     #+end_src
+** Two way data binding with ngModel
+   - This can be used as a shortcut to the above example, to automatically set an attribute value to a template item.
+     You need to import FormsModule from @angular/forms in the app.module to use it.
+     #+begin_src html
+<textarea [(ngModel)]="enteredValue"></textarea>
+<button (click)="onAddPost()"></button>
+     #+end_src
+     The ngModel needs to be bound to an attribute on the component, like so:
+     #+begin_src typescript
+             export class TheComponent() {
+          enteredValue = '';
+
+          onAddPost() {
+              console.log(this.enteredValue);
+          }
+             }
+     #+end_src
