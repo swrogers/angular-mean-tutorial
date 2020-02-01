@@ -2,6 +2,9 @@
   Notes that I've taken during the video portion of the course.
 
 * Section 2 - The Angular Frontend
+  :PROPERTIES:
+  :ID:       e424ca7c-9802-4b6b-a41e-3991b23310d9
+  :END:
 ** The folder structure
    app.module.ts defines the building blocks and features of the application.
    main.ts is the entry point and loads up the app.module.t
