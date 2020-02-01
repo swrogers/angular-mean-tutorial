@@ -1,0 +1,12 @@
+<!-- the multi="true" allows for more than one according to be open at once -->
+<mat-accordion multi="true" *ngIf="posts.length > 0">
+  <mat-expansion-panel *ngFor="let post of posts">
+    <mat-expansion-panel-header>
+     {{ post.title }}
+    </mat-expansion-panel-header>
+    <p>
+      {{ post.content }}
+    </p>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0" >There are no posts yet</p>
