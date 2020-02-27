@@ -29,7 +29,7 @@ const storage = multer.diskStorage({
   }
 });
 
-router.post('', multer(storage).single('image') ,(req, res, next) => {
+router.post('', multer({storage: storage}).single('image') ,(req, res, next) => {
   const post = new Post({
     title: req.body.title,
     content: req.body.content
@@ -79,7 +79,7 @@ router.get('/:id', (req, res, next) => {
 });
 
 
-router.delete(':id', (req, res, next) => {
+router.delete('/:id', (req, res, next) => {
   console.log(req.params.id);
   Post.deleteOne({_id: req.params.id}).then(result => {
     console.log(result);
