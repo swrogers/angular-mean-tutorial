@@ -6,7 +6,7 @@ const postsRoutes = require('./routes/posts');
 
 const app = express();
 
-mongoose.connect("mongodb+srv://mean-tutorial:wVqNbiGxrxgtQDhE@cluster0-qctvd.gcp.mongodb.net/mean-angular-tutorial?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://mean-tut-2:TWd3D6z44JHyoRkF@cluster0-qctvd.gcp.mongodb.net/mean-angular-tutorial?retryWrites=true&w=majority")
   .then(() => {
     console.log('Connected to database');
   })
